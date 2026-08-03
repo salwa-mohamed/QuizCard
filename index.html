@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCrad</title>
+    <link rel="icon" href="img/download.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+
+</head>
+<body>
+    <main class="container d-flex align-items-center justify-content-center min-vh-100">
+        <article class="card border-0 shadow-sm rounded-4 p-4 p-md-5 w-100" style="max-width:500px;">
+            <!-- screen 1 -->
+            <section id="home screen">
+            <!-- home screen -->
+            <header class="text-center mb-4">
+                <h1 class="fw-bold text-primary">QuizCraft</h1>
+                <p class="text-muted">Test your knowledge. One question at a time.</p>
+            </header>
+            <!-- choose category -->
+            <h4 class="text-primary mb-4">CHOOSE A CATEGORY..</h4>
+            <div class="category d-grid mb-4 gap-3">
+               <button type="button" class="btn btn-outline-primary category-btn" data-category="General knowledge">General knowledge</button>
+               <button type="button" class="btn btn-outline-primary category-btn" data-category="Science">Science</button>
+               <button type="button" class="btn btn-outline-primary category-btn" data-category="History">History</button>
+               <button type="button" class="btn btn-outline-primary category-btn" data-category="Sports">Sports</button>
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-primary" type="button" id="start-btn">Start Quiz →</button>
+            </div>
+            <p class="text-muted mt-3 text-center">10 Questions - Multiple Choice - No Sign-up Needed</p>
+            </section>
+
+            <!-- screen 2 -->
+             <section id="quiz-screen" class="d-none">
+                <div class="d-flex justify-content-between mb-2">
+                    <span id="question">Question 1 of 10</span>
+                    <span id="score">Score=0</span>
+                </div>
+
+                <div class="progress mb-4">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress" style="width: 0%;"></div>
+                </div>
+
+                <div class="card border-0 shadow-sm p-3 m-3">
+                    <span class="title-card align-self-start mb-3 text-primary" id="title-card">Science</span>
+                    <h4 id="card-question"></h4>
+                </div>
+
+                <div class="mb-3 gap-2" id="choices"></div>
+
+                <div class="text-end">
+                    <button class="btn btn-main d-none" id="next-btn">Next Question →</button>
+                </div>
+             </section>
+
+             <!-- screen 3 -->
+              <section class="d-none text-center" id="result-screen">
+                <div class="score-circle mx-auto mb-3">
+                    <h2 class="mb-0" id="final-score">10/10</h2>
+                </div>
+                <h3 class="fw-bold">Great Job!</h3>
+                <p class="text-muted" id="result-message"></p>
+
+                <div class="d-flex justify-content-center my-4 gap-2"> <!-- صلحت justify-contant-center -->
+                    <div><h5 class="text-success" id="correct-count">0</h5><small>correct</small></div>
+                    <div><h5 class="text-danger" id="incorrect-count">0</h5><small>Incorrect</small></div>
+                    <div><h5 class="text-primary" id="result-category">0</h5><small>Category</small></div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-2">
+                    <button type="button" class="btn btn-primary" id="play-agian-btn">Play Again</button>
+                    <button type="button" class="btn btn-outline-primary" id="change-category-btn">Change Category</button>
+                </div>
+              </section>
+
+        </article>
+    </main>
+    <script src="project.js"></script>
+</body>
+</html>
